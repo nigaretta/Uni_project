@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+.message{
+    background-color: #9dc0da;
+    height: 75px;
+    width: 40%;
+    margin: 0rem 0rem 0rem 2rem;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 20px rgba(141, 138, 158, 0.6);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.message p{
+    font-size: 17.6px;
+    color: #080710;
+    margin-bottom: 0.3rem;
+}
+
+.message a{
+    text-decoration: none;
+    color: rgb(55, 55, 145);
+    font-weight: 700;
+}
+
+.message a:hover{
+  color: rgb(90, 90, 199);
+}

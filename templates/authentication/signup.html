@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/toastsignup.css' %}">
+    <link rel="shortcut icon" href="{% static 'skycastfavicon-removebg-preview.webp' %}" type="image/x-icon">
+    <title>Sign Up - SkyCast</title>
+</head>
+<body>
+
+<!-- displaying messages -->    
+
+    {% for field in form %}
+    {% if field.errors %}
+        <div class="toast alert">
+            <div class="toast-body">
+                <p><em>{{ field.label_tag }}</em>
+                    {% for error in field.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </p>
+            </div>
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close" onclick="closeToast(this)">
+                <span aria-hidden="true" class="close">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+{% endfor %}
+
+             <!-- Sign up form -->
+
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <fieldset>
+            <h3>Sign Up</h3>
+
+            <!-- Username Field -->
+                {{ form.username.label_tag }}
+                {{ form.username }}
+
+
+            <!-- Email Field -->
+                {{ form.email.label_tag }}
+                {{ form.email }}
+
+    <div class="password-sctin">
+        <!-- Password Field -->
+       {{ form.password1.label_tag }}
+       {{ form.password1 }}
+
+
+    <!-- Password Confirmation Field -->
+      {{ form.password2.label_tag }}
+      {{ form.password2 }}
+
+    </div> 
+        
+
+            <!-- Sign Up Button -->
+                <button type="submit">Sign up</button>
+
+            <!-- Already have an account? Log In Button -->
+                <span>Already have an account?</span>
+                <button class="lgn-btn"><a href="{% url 'login' %}">Log in</a></button>
+        </fieldset>
+    </form>
+
+
+    <script src="/static/JS/toast.js"></script>
+</body>
+</html>

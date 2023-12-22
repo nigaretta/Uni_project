@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - SkyCast</title>
+  <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+  <link rel="shortcut icon" href="{% static 'skycastfavicon-removebg-preview.webp' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header>
+
+    <div class="navbar">
+        <img src="{% static 'skycastlogosecond2-removebg-preview.png' %}" alt="">
+
+        <div class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <div class="btn-group">
+            {% if user.is_authenticated %}
+            <button type="submit"><a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i>Profile</a></button>
+            <button type="submit"><a href="{% url 'logout' %}">Logout</a></button>
+            {% else %}
+            <button type="submit"><a href="{% url 'login' %}">Login</a></button>
+            <button type="submit"><a href="{% url 'signup' %}">Sign Up</a></button>
+            {% endif %}
+        </div>
+    </div>
+
+</header>
+
+
+ <div class="weather-section">
+    <div class="weather-input">
+
+      <input class="city-input" id="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
+      <button class="search-btn" id="search-btn">Search</button>
+
+      <button class="location-btn" id="location-btn">Use Current Location</button>
+      
+    </div>
+    
+  </div>
+
+
+  <div class="weather-data">
+    <!--show current weather forecast-->
+    <div class="current-weather">
+
+    </div>
+
+    <div class="city-image-container">
+
+    </div>
+    <!--show temp, wind, humidity-->
+
+
+  </div>
+  <div class="days-forecast">
+    <ul class="weather-cards" id="weather-cards">
+
+    </ul>
+  </div>
+
+
+
+
+  <script src="/static/JS/home.js"></script>
+</body>
+
+</html>

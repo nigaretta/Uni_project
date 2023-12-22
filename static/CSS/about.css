@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E3F2FD;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #130e22;
+  }
+  header .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin-bottom: 3rem;
+  }
+  header img {
+    width: 9%;
+  }
+  header .nav-links {
+    margin-right: 42rem;
+    margin-top: 2.2rem;
+    width: 80%;
+  }
+  header .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 0.5rem;
+  }
+  
+  header .nav-links .about-link:hover{
+      color: #fff;
+  }
+
+  header .nav-links a:hover {
+    color: #c2bfbf;
+    transition: 0.5s;
+  }
+  header .btn-group {
+    margin-top: 2.2rem;
+    width: 100%;
+  }
+  header .btn-group button a{
+      text-decoration: none;
+      color: #080710;
+      font-size: 14px;
+      font-weight: 600;
+  }
+  header .btn-group button {
+    width: 35%;
+    height: 38px;
+    border: none;
+    margin-right: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  header .btn-group button:hover {
+    cursor: pointer;
+    background-color: #cac6c6;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+  }
+  header .btn-group button i{
+    margin-right: 5px;
+  }  
+
+
+.about-container{
+  margin: 2rem 1rem;
+}
+
+.project-part{
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(100, 98, 114, 0.6);
+}
+
+
+.text-part{
+  margin-top: 20px;
+}
+
+.text-part h1{
+  color: #080710;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.text-part h1::before{
+  content: "";
+  width: 14%;
+  height: 5px;
+  background-color: rgb(17, 64, 102);
+  display: block;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+.text-part h1::after{
+  content: "";
+  width: 14%;
+  height: 5px;
+  background-color: rgb(59, 120, 170);
+  display: block;
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+.text-part h1:hover::before{
+  transform: scale(1);
+  transform: translate(0px 30px);
+}
+
+.text-part h1:hover::after{
+  transform: scale(1);
+  transform: translate(0px 30px);
+}
+
+.text-part p{
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 27px;
+  color: #080710;
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #080710;
+}
+
+
+.team-container{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team-container .first-person img{
+  width: 73%;
+  height: 190px;
+  margin-left: 23px;
+}
+
+.team-container .second-person img{
+   width: 80%;
+   height: 200px;
+   margin-left: 23px;
+}
+
+.team-container .third-person img{
+  width: 80%;
+  height: 200px;
+  margin-left: 23px;
+}
+
+.team-container h4{
+  text-align: center;
+  color: #080710;
+}
+
+.team-container p{
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #665fa5;
+}
+
+.team-container li {
+  list-style-type:square;
+}
+
+.team-container ul{
+  margin-left: 15px;
+}
+
+.first-person{
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 20px rgba(100, 98, 114, 0.6);
+}
+
+.second-person{
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 20px rgba(100, 98, 114, 0.6);
+}
+
+.third-person{
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 20px rgba(100, 98, 114, 0.6);
+}
+
+.team-container button i{
+  font-size: 20px;
+}
+
+.team-container button {
+  border:none;
+}
+
+.first-person .btn-first{
+  margin-left: 100px;
+}
+
+.second-person .btn-first{
+  margin-left: 100px;
+}
+
+.third-person .btn-first{
+  margin-left: 100px;
+}

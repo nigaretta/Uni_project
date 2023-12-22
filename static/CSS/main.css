@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes slid {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+    -webkit-transform: perspective(1000px) rotateY(360deg);
+    -moz-transform: perspective(1000px) rotateY(360deg);
+    -ms-transform: perspective(1000px) rotateY(360deg);
+    -o-transform: perspective(1000px) rotateY(360deg);
+}
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #E3F2FD;
+  overflow: hidden;
+}
+
+.scope {
+  margin-left: 37rem;
+  margin-top: 12.5rem;
+  width: 180px;
+  height: 180px;
+  transform-style: preserve-3d;
+  animation: slid 30s linear infinite;
+}
+.scope span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: lcenter;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+.scope span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 2s;
+}
+.scope span:hover img {
+  transform: translateY(-50px) scale(1.1);
+  cursor: pointer;
+}
+
+header {
+  background-color: #130e22;
+  font-family: 'Roboto', sans-serif;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  margin-bottom: 3rem;
+}
+header img {
+  width: 9%;
+}
+header .nav-links {
+  margin-right: 42rem;
+  margin-top: 2.2rem;
+  width: 80%;
+}
+header .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  padding-right: 0.5rem;
+}
+header .nav-links a:hover {
+  color: #c2bfbf;
+  transition: 0.5s;
+}
+header .btn-group {
+  margin-top: 2.2rem;
+  width: 100%;
+}
+header .btn-group button a{
+    text-decoration: none;
+    color: #080710;
+    font-size: 14px;
+    font-weight: 600;
+}
+header .btn-group button {
+  width: 35%;
+  height: 38px;
+  border: none;
+  margin-right: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+header .btn-group button:hover {
+  cursor: pointer;
+  background-color: #cac6c6;
+  transition:0.5s;
+  -webkit-transition:0.5s;
+  -moz-transition:0.5s;
+  -ms-transition:0.5s;
+  -o-transition:0.5s;
+}
+
+header .btn-group button i{
+  margin-right: 5px;
+}
+

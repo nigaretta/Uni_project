@@ -1,0 +1,32 @@
+.toast {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7eced;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 1rem 1rem;
+    width: 400px; /* Adjust as needed */
+    height: 35px;
+    /* margin-bottom: 3rem; */
+  }
+  
+  .toast-body p{
+   margin-top: 5px;
+  }
+  
+  .btn-close {
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    background-color: #f7eced;
+  }
+  
+  .close{
+    font-size: 40px;
+    color: gray;
+  }
+  
+  .close:hover{
+    color: #000;
+    opacity: 0.7;
+  }
